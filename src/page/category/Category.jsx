@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import CategoryCard from "../../component/CategoryCard";
+import React, { Suspense, useEffect, useState } from "react";
+const CategoryCard = React.lazy(() => import("../../component/CategoryCard"));
 
 const Category = () => {
   const [dataCategories, setDataCategories] = useState([]);
@@ -28,12 +28,14 @@ const Category = () => {
           {dataCategories.map((data, i) => {
             return (
               <li key={i}>
-                <CategoryCard
-                  key={i}
-                  src={data.strCategoryThumb}
-                  alt={data.strCategoryDescription}
-                  caption={data.strCategory}
-                />
+                <Suspense fallback={<div>Loading....</div>}>
+                  <CategoryCard
+                    key={i}
+                    src={data.strCategoryThumb}
+                    alt={data.strCategoryDescription}
+                    caption={data.strCategory}
+                  />
+                </Suspense>
               </li>
             );
           })}
