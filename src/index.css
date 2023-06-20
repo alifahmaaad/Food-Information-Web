@@ -7,3 +7,12 @@ body,
 .App {
   height: 100%;
 }
+.navbar > div > ul > li {
+  padding: 0.5rem 0 0.5rem 0;
+}
+.navbar > div > ul > li > a:hover {
+  color: gray;
+}
+.navbar > div > ul > li:hover {
+  transform: scale(1.1);
+}
