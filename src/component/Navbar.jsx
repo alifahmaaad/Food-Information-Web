@@ -6,7 +6,7 @@ const NavbarComp = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <nav className="navbar flex flex-wrap justify-between w-full py-4 px-10 border-b-2 border-gray-200">
+    <nav className="navbar flex flex-wrap justify-between w-full py-4 px-10 border-b-2 border-gray-200 bg-white fixed z-10">
       <div className="flex items-center font-bold py-[0.5rem]">mealapp</div>
       <div className="flex items-center">
         <button onClick={handleOpenNav}>
