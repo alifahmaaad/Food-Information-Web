@@ -4,6 +4,7 @@ import NavbarComp from "./component/Navbar";
 import Category from "./page/category/Category";
 import DetailCategory from "./page/category/DetailCategory";
 import MealDetail from "./page/food/DetailMeal";
+import Footer from "./component/Footer";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="*" element={<NoPage />} />
         </Routes>
       </div>
+      <Footer />
     </div>
   );
 }
