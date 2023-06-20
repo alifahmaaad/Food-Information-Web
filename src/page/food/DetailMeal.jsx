@@ -95,5 +95,6 @@ const MealDetail = () => {
 
 export default MealDetail;
 export const ListRecipes = ({ data }) => {
-  return data != "" && <li>{data}</li>;
+  console.log(data);
+  return <>{data != "" && data != null && <li>{data}</li>}</>;
 };
