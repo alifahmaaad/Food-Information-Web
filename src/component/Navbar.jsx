@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const NavbarComp = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,10 +25,7 @@ const NavbarComp = () => {
       <div className={(!isOpen && "hidden ") + "md:flex w-full md:w-auto"}>
         <ul className="md:flex md:justify-between gap-3">
           <li>
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <a href="#">Food Category</a>
+            <Link to="/">Food Category</Link>
           </li>
         </ul>
       </div>

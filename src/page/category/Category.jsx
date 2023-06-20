@@ -8,7 +8,6 @@ const Category = () => {
       .then((response) => response.json())
       .then((data) => {
         setDataCategories(data.categories);
-        console.log(data);
       })
       .catch((e) => alert(e.message));
   };
