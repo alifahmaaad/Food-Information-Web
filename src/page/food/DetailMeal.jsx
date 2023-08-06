@@ -77,7 +77,7 @@ const MealDetail = () => {
                   Tutorial to Make <b>{data.strMeal}</b>
                 </h2>
                 <iframe
-                  className="w-[20rem] h-[18rem] md:w-[45rem] md:h-[35rem]"
+                  className="aspect-video w-full lg:w-[50%]"
                   src={data.strYoutube.replace(
                     "https://www.youtube.com/watch?v=",
                     "https://www.youtube.com/embed/"
