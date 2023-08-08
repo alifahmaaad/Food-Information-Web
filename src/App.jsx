@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import NoPage from "./component/NoPage";
 import NavbarComp from "./component/Navbar";
 import Category from "./page/category/Category";

@@ -8,7 +8,7 @@ const MealCard = ({ src, alt, id }) => {
         <figcaption className="text-over-img font-bold text-white text-lg bg-black/40 rounded-xl hover:bg-black/0">
           <Link
             to={"/foods/detail/" + id}
-            className="flex items-center justify-center h-full w-full "
+            className="flex items-center justify-center h-full w-full text-center"
           >
             {alt}
           </Link>

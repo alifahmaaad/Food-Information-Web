@@ -8,7 +8,9 @@ const NavbarComp = () => {
   };
   return (
     <nav className="navbar flex flex-wrap justify-between w-full py-4 px-10 border-b-2 border-gray-200 bg-white fixed z-10">
-      <div className="flex items-center font-bold py-[0.5rem]">mealapp</div>
+      <div className="flex items-center font-bold py-[0.5rem] text-xl">
+        mealapp<p className="text-[#FFB100]">.</p>
+      </div>
       <div className="flex items-center">
         <button onClick={handleOpenNav}>
           <svg
@@ -24,8 +26,13 @@ const NavbarComp = () => {
       </div>
       <div className={(!isOpen && "hidden ") + "md:flex w-full md:w-auto"}>
         <ul className="md:flex md:justify-between gap-3">
-          <li>
-            <Link to="/">Food Category</Link>
+          <li className="flex items-center hover:scale-105">
+            <Link
+              to="/"
+              className="bg-[#FFB100] font-semibold text-white p-2 px-7 rounded-full hover:bg-transparent hover:text-[#FFB100] border border-[#FFB100]"
+            >
+              Food Category
+            </Link>
           </li>
         </ul>
       </div>
