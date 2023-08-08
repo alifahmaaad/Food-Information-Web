@@ -8,28 +8,35 @@ const NavbarComp = () => {
   };
   return (
     <nav className="navbar flex flex-wrap justify-between w-full py-4 px-10 border-b-2 border-gray-200 bg-white fixed z-10">
-      <div className="flex items-center font-bold py-[0.5rem] text-xl">
-        mealapp<p className="text-[#FFB100]">.</p>
-      </div>
+      <Link to="/">
+        <div className="flex items-center font-bold py-[0.5rem] text-xl">
+          mealapp<p className="text-[#FFB100]">.</p>
+        </div>
+      </Link>
       <div className="flex items-center">
-        <button onClick={handleOpenNav}>
-          <svg
-            xmlns="<http://www.w3.org/2000/svg>"
-            className="h-6 w-6 cursor-pointer md:hidden block"
-            fill="white"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
+        <button onClick={handleOpenNav} className="transition duration-700 ">
+          <span
+            className={
+              (isOpen ? " " : "icon-animation ") +
+              "material-symbols-outlined md:hidden "
+            }
           >
-            <path d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
+            {isOpen ? "close" : "lunch_dining"}
+          </span>
         </button>
       </div>
-      <div className={(!isOpen && "hidden ") + "md:flex w-full md:w-auto"}>
+      <div
+        className={
+          (!isOpen && "hidden ") +
+          "md:flex w-full md:w-auto py-3 md:py-0 transition duration-700"
+        }
+      >
         <ul className="md:flex md:justify-between gap-3">
           <li className="flex items-center hover:scale-105">
             <Link
               to="/"
               className="bg-[#FFB100] font-semibold text-white p-2 px-7 rounded-full hover:bg-transparent hover:text-[#FFB100] border border-[#FFB100]"
+              onClick={handleOpenNav}
             >
               Food Category
             </Link>

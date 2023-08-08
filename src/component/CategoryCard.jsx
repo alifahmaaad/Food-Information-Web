@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const CategoryCard = ({ src, alt, caption }) => {
   const [loading, setLoading] = useState(true);
   return (
-    <div className="card w-[15rem] relative z-1 rounded-xl shadow-md p-3 mt-[7rem] bg-gray-100 hover:scale-110 group transition duration-700">
+    <div className="card w-[10rem] sm:w-[15rem] relative z-1 rounded-xl shadow-md p-3 mt-[7rem] bg-gray-100 hover:scale-110 group transition duration-700">
       <Link to={"category/detail/" + caption}>
         <figure className="">
           {loading && (

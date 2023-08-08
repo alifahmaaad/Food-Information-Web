@@ -42,9 +42,9 @@ const Category = () => {
         </div>
         <div>{randMeal != null && <MainMeal meal={randMeal[0]} />}</div>
       </header>
-      <section id="categories" className="container mx-auto">
+      <section id="categories" className="container mx-auto py-10  pb-20">
         <div className="text-2xl font-bold py-10 px-10">Food Category.</div>
-        <ul className="gap-5 px-4 py-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 justify-items-center ">
+        <ul className="gap-5 px-4 py-5 grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 justify-items-center ">
           {dataCategories.map((data, i) => {
             return (
               <Suspense fallback={<LoadingCompCategoryCard />} key={i}>
