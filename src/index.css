@@ -9,6 +9,7 @@ body,
 }
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 .text-over-img {
@@ -18,4 +19,22 @@ html {
   transform: translate(-50%, -50%);
   height: 100%;
   width: 100%;
+}
+
+@keyframes rotate-icon {
+  0% {
+    rotate: 0;
+  }
+  50% {
+    rotate: 25deg;
+  }
+  50% {
+    rotate: 45deg;
+  }
+}
+.icon-animation:active {
+  animation: rotate-icon 2s ease-in-out;
+}
+.icon-animation {
+  animation: rotate-icon 2s ease-in-out;
 }

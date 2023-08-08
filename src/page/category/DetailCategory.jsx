@@ -1,5 +1,6 @@
 import React, { Suspense, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import LoadingCompMealCard from "../../component/LoadingCompMealCard";
 const MealCard = React.lazy(() => import("../../component/MealCard"));
 const DetailCategory = () => {
   const params = useParams();
@@ -20,17 +21,18 @@ const DetailCategory = () => {
   }, []);
   return (
     <div className="container mx-auto">
-      <header className="flex w-full py-5 items-center justify-center border-b-4">
+      <header className="flex w-full py-4 items-center px-20">
         <h1 className="text-4xl font-bold">
-          Food Category : {params.categoryName}
+          Meals in <p className="text-[#FFB100]">{params.categoryName} </p>
+          Category.
         </h1>
       </header>
-      <section>
-        <ul className="gap-3 px-4 py-5 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 justify-items-center ">
+      <section className="pb-20">
+        <ul className="gap-10 px-4 py-5 grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 justify-items-center ">
           {dataDetail.map((data, i) => {
             return (
               <li key={i}>
-                <Suspense fallback={<div>Loading...</div>}>
+                <Suspense fallback={<LoadingCompMealCard />} key={i}>
                   <MealCard
                     src={data.strMealThumb}
                     alt={data.strMeal}
